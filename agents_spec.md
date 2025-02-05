@@ -4,14 +4,19 @@
 
 ### System Prompt
 
-Instructions on how to decide if task should be exitted.
+- Domain-agnostic instructions on how to decide if a task should be exitted (a function w/in a multi-agent system)
+- Domain-agnostic few-shot examples
 
-Inputs:
+(Dynamic) Inputs:
+- Domain-specific stuff:
+    - General introductory info (e.g., 'The multi-agent system controls a Vanilla Minecraft player where env state looks like ____. Your job is to decide whether to exit the current task node...')
+    - Few-shot "good" examples
+    - Agent-specific tips (e.g., Pay attention to ____. Don't ____.)
 - Output format for JSON
 
 ### User Prompt
 
-Inputs:
+(Dynamic) Inputs:
 - The entire hierarchical plan traversal
 - Indication of what the "current task" we are deliberating exitting is
 - Current environment state
@@ -51,14 +56,19 @@ Outputs:
 
 ### System Prompt
 
-Instructions on how to summarize the exit of a task node.
+- Domain-agnostic instructions on how to summarize the exit of a task node (a function w/in a multi-agent system)
+- Domain-agnostic few-shot examples
 
-Inputs:
+(Dynamic) Inputs:
+- Domain-specific stuff:
+    - General introductory info (e.g., 'The multi-agent system controls a Vanilla Minecraft player where env state looks like ____. Your job is to distill why a task node was deemed to be exited...')
+    - Few-shot "good" examples
+    - Agent-specific tips (e.g., Pay attention to ____. Don't ____.)
 - Output format for JSON
 
 ### User Prompt
 
-Inputs:
+(Dynamic) Inputs:
 - The "reasoning" for the (exit) classification decision\*
 - ?
 
@@ -77,14 +87,20 @@ Outputs:
 
 ### System Prompt
 
-Instructions on how to (re-) plan future subtasks.
+- Domain-agnostic instructions on how to (re-) plan future subtasks (a function w/in a multi-agent system)
+- Domain-agnostic few-shot examples
 
-Inputs:
+(Dynamic) Inputs:
+- Domain-specific stuff:
+    - General introductory info (e.g., 'The multi-agent system controls a Vanilla Minecraft player where env state looks like ____. You must plan sequential actions that eventually decompose to these action primitives...')
+    - The set of available action primitives
+    - Few-shot "good" examples
+    - Agent-specific tips (e.g., Pay attention to ____. Don't ____.)
 - Output format for JSON
 
 ### User Prompt
 
-Inputs:
+(Dynamic) Inputs:
 - The entire hierarchical plan traversal
 - Indication of the "current task" and "subtasks" for we are (re-) planning future tasks
 - Current environment state
@@ -104,14 +120,20 @@ Outputs:
 
 ### System Prompt
 
-Instructions on summarize the outcomes of an action attempt.
+- Domain-agnostic instructions on summarize the outcomes of an action attempt (a function w/in a multi-agent system)
+- Domain-agnostic few-shot examples
 
-Inputs:
+(Dynamic) Inputs:
+- Domain-specific stuff:
+    - General introductory info (e.g., 'The multi-agent system controls a Vanilla Minecraft player where env state looks like ____. Your job is to summarize the attempt one of the following action primitives...')
+    - The set of available action primitives
+    - Few-shot "good" examples
+    - Agent-specific tips (e.g., Pay attention to ____. Don't ____.)
 - Output format for JSON
 
 ### User Prompt
 
-Inputs:
+(Dynamic) Inputs:
 - The entire hierarchical plan traversal
 - Indication of what the "subtask" for wich we are evaluating and summarizing the successful or failed completion is
 - (NEW) Current environment state
@@ -129,5 +151,3 @@ Outputs:
 
 - Memory-compressing agent is deferred for future work/consideration
 - Useful design pattern: have a "state" object that is an input to the agents
-
-
