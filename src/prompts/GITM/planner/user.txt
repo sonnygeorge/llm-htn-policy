@@ -1,0 +1,11 @@
+My current state:
+- inventory: {inventory}
+- environment: {environment}
+
+The goal is to {goal}.
+
+Here is one plan to achieve similar goal for reference: {reference plan}.
+
+Begin your plan. Remember to follow the response format.
+_or_ Action {successful action} succeeded, and {feedback message}. Continue your plan. Do not repeat successful action. Remember to follow the response format.
+_or_ Action {failed action} failed, because {feedback message}. Revise your plan from the failed action. Remember to follow the response format.
