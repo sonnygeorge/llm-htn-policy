@@ -21,11 +21,16 @@ If I were to make this "headless" simulator, I would need to define a set of act
 - That are indeed reliably doable with Mineflayer JS 
 - For which the simulator then generates (more or less) representative (statistically accurate) outcomes (env representations).
 
-### Alternatives
+### Alternatives/Complements
 
-[MC-TextWorld](https://github.com/CraftJarvis/MC-TextWorld) from the [CraftJarvis](https://craftjarvis.github.io/) team.
+- [MC-TextWorld](https://github.com/CraftJarvis/MC-TextWorld) from the [CraftJarvis](https://craftjarvis.github.io/) team
+- [TextWorld](https://www.microsoft.com/en-us/research/project/textworld/) from Microsoft (2018)
 
-## Order of Operations
+### Misc. Thoughts
+
+- Having a hyperparameter for the "chaos" (non-determinism) of the simulator could lead to an interesting study on the effects of how non-deterministic a world/task is.
+
+## Agent Development Order of Operations
 
 1. Prompt optimization/prompt engineering
 2. LLM fine-tuning
