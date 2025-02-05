@@ -218,6 +218,7 @@ class LlmHtnPolicy:
 
 # task = "Defeat the Ender Dragon"
 task = "Build a village with as many houses as there are unique plant species in your current biome. In each house, there should be a chest containing a single unique item that the other house's chests do not contain. For extra points, use as many distinct wood varieties as you can."
+task = "Find 3 nearby villages and count how many farms each village has."
 env_state = "You just spawned into a fresh Minecraft world."
 policy = LlmHtnPolicy(task, env_state)
 policy()
