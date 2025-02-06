@@ -1,9 +1,10 @@
-from src.llm_htn_policy import LlmHtnPolicy, Task
+"""Misc. helper functions that don't fit elsewhere."""
 
+from enum import StrEnum
 from typing import Optional
 
 
-def get_pretty_htn_string(htn: LlmHtnPolicy) -> str:
+def get_pretty_htn_string(htn) -> str:  # FIXME: Old/defunct
     """Pretty prints a snapshot of a traversal of hierarchical task network (HTN) of the
     input policy."""
     row_fmt_str = "{0}{1}{2} {3}\n"
@@ -11,7 +12,7 @@ def get_pretty_htn_string(htn: LlmHtnPolicy) -> str:
     output = row_fmt_str.format("", "", root_status, htn.root_task.description)
 
     def _recursively_add_subtasks_to_output(
-        task: Task, prev_indent: str = "", prev_corner: Optional[str] = None
+        task, prev_indent: str = "", prev_corner: Optional[str] = None
     ):
         n_subtasks = len(task.subtasks)
         for i, subtask in enumerate(task.subtasks):
@@ -34,3 +35,12 @@ def get_pretty_htn_string(htn: LlmHtnPolicy) -> str:
 
     _recursively_add_subtasks_to_output(htn.root_task)
     return output.strip()
+
+
+class DefunctTaskStatus(StrEnum):  # FIXME: Old/defunct
+    SUCCESS = "[✅]"  # Executed successfully
+    FAILURE = "[❌]"  # Failed
+    PARTIAL = "[🤷]"  # Outcome wasn't a "black & white" success/fail (partial success)
+    ABANDONED = "[💀]"  # Dropped in favor of a different approach
+    IN_PROGRESS = "[⏳]"  # Currently being decomposed/executed
+    FUTURE = "[💭]"  # Postulated as a future task
