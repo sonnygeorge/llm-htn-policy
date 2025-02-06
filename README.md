@@ -35,6 +35,12 @@ Cons:
 - Will not be good for going past recursion/decomposition layer 3, since high level plans are spoonfed, and this breakdown will basically map 1-to-1 with primitive actions
 - Potentially good for "practicing" exiting task nodes that are foolishly suggested
 
+### AlfWorld:
+
+"AlfWorld contains interactive TextWorld environments (Côté et. al) that parallel embodied worlds in the ALFRED dataset."
+
+AlfWorld is the same idea as TextWorld, but the actions can be visually rendered in a 3d simulation. The primitives are:
+
 ### MC-TextWorld from CraftJarvis:
 
 TBD

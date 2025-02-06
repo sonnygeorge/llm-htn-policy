@@ -161,7 +161,7 @@ class Planner:
 class TaskStatus(StrEnum):
     SUCCESS = "Attempted (success)"
     FAILURE = "Attempted (failure)"
-    NEITHER = "Attempted"
+    PARTIAL = "Attempted (partial success)"
     ABORTED = "Aborted"
     IN_PROGRESS = "In progress"
     PLANNED = "Tentatively planned"

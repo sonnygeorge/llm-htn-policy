@@ -145,6 +145,9 @@ Outputs:
 
 ### Test Cases
 
+**When a primitive action call returns an error (e.g., too many arguments, function not in namespace, etc.)**
+1. ?
+
 ...
 
 ## 📝 Misc. Notes
