@@ -7,7 +7,7 @@ from collections import OrderedDict
 import rich
 from langchain_openai import ChatOpenAI
 from langchain.chat_models.base import BaseChatModel
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 from langchain_core.messages import HumanMessage, SystemMessage
 from dotenv import load_dotenv
 
