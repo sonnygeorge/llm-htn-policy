@@ -162,7 +162,7 @@ class TaskStatus(StrEnum):
     SUCCESS = "Attempted (success)"
     FAILURE = "Attempted (failure)"
     PARTIAL = "Attempted (partial success)"
-    ABORTED = "Aborted"
+    DROPPED = "Dropped"
     IN_PROGRESS = "In progress"
     PLANNED = "Tentatively planned"
 

@@ -8,7 +8,7 @@ from pydantic import BaseModel
 from langchain.chat_models.base import BaseChatModel
 from langchain_core.messages import HumanMessage, SystemMessage
 
-from configs import Strings, POLICIES_AND_AGENTS, PromptKws
+from constants import Strings, PromptKws
 
 
 class Agent:
@@ -67,7 +67,7 @@ class Agent:
 
 def get_agents_for_policy(policy: str, domain: str) -> Dict[str, Agent]:
     agents = {}
-    for agent, config in POLICIES_AND_AGENTS[policy].items():
+    for agent, config in dict(): # POLICIES_AND_AGENTS[policy].items():
         # Read in agent's system prompt
         sys_prompt_path = Strings.SYS_PROMPTS_DIR_PATH.format(
             policy=policy, agent=agent

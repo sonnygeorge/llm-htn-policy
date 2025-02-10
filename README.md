@@ -1,17 +1,15 @@
 # Project Name (TBD)
 
-Currently using `./main.py` for the code/functions that I am incrementally developing.
-
 ## Todo
 
 ASAP:
 
-- ❗ Use OPENAI playground to develop a (v1?) prompt for the "Backtrack Gate" (rename to "Backtracker"?) that also does the job of the "Backtrack Summarizer"
 - ❗ Remove emojis from "naming legend"
 
 Soon:
 
-- End-to-end pipeline w/ current design pattern using 'arbitrary' domain and FORMALLY CODE REVIEW MYSELF
+- End-to-end pipeline using 'arbitrary' domain
+- Planviz
 
 Soonish:
 

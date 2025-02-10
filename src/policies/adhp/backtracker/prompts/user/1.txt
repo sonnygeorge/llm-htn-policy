@@ -1,0 +1,11 @@
+ENVIRONMENT STATE:
+
+{environment_state}
+
+CURRENT PLAN TRAVERSAL:
+
+```json
+{plan_traversal}
+```
+
+Current task: "{current_task}": "{current_task_description}"

@@ -3,12 +3,12 @@
 from enum import StrEnum
 from typing import Optional
 
-from abstract import DomainInterface
+from abstract import Domain
 
 
 def ascertain_operational_domain_starting_up_if_necessary(
     domain: str,
-) -> DomainInterface:
+) -> Domain:
     pass  # TODO: Implement this function
 
 

@@ -1,5 +1,3 @@
-"""Common classes and functions used throughout the project."""
-
 from abc import ABC, abstractmethod
 from typing import Any, Dict, Optional, Tuple
 
@@ -20,12 +18,12 @@ class EnvState(ABC):
         pass
 
 
-class DomainInterface(ABC):
+class Domain(ABC):
     pass  # FIXME
 
 
 class Task(ABC):
-    def __init__(self, domain_interface: DomainInterface):
+    def __init__(self, domain_interface: Domain):
         pass
 
     @property
@@ -55,7 +53,7 @@ class Task(ABC):
     @abstractmethod
     def step(self) -> bool:
         """Called after every action execution to (1) calculate and record any important
-        variables (e.g., step-by-step reward) and (2) return whether to abort the task
+        variables (e.g., step-by-step reward) and (2) return whether to drop the task
         episode because of something observed in the environment (e.g., an irreversible
         state)."""
         pass
@@ -77,6 +75,7 @@ PrimitiveAction = Any  # FIXME
 
 
 class Policy(ABC):
+    # TODO: Implement appropriate equivalent of loss.backward() for Supervised+RL training
     @abstractmethod
     def __init__(self, agents: Dict[str, Agent], task: str):
         pass
