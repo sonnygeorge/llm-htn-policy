@@ -1,4 +1,4 @@
-Assert output is `true` and reasoning is ≈ "3 iron for a bucket is no longer necessary since the blacksmith chest  at (243, 67, -71) already contains a water bucket" when "current task" = "1.2" and plan traversal ≈:
+Assert status is `In progress` (don't backtrack) when "current task" = "1" and plan traversal ≈:
 ```json
 {
     "node": "1",
@@ -16,24 +16,9 @@ Assert output is `true` and reasoning is ≈ "3 iron for a bucket is no longer n
         {
             "node": "1.2",
             "description": "Acquire bucket",
-            "status": "In progress",
-            "retrospective": null,
-            "subtasks": [
-                {
-                    "node": "1.2.1",
-                    "description": "Acquire 3 iron",
-                    "status": "Dropped",
-                    "retrospective": "The blacksmith chest at coordinates (243, 67, -71) already contains a water bucket.",
-                    "subtasks": "null"
-                },
-                {
-                    "node": "1.2.2",
-                    "description": "Craft bucket with 3 iron",
-                    "status": null,
-                    "retrospective": null,
-                    "subtasks": null,
-                }
-            ]
+            "status": "Dropped",
+            "retrospective": "The blacksmith chest at coordinates (243, 67, -71) already contains a water bucket.",
+            "subtasks": null
         },
         {
             "node": "1.3",
@@ -52,5 +37,3 @@ Assert output is `true` and reasoning is ≈ "3 iron for a bucket is no longer n
     ]
 }
 ```
-
-Current task: 

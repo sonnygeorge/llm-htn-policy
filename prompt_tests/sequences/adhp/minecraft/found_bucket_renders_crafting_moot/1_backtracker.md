@@ -1,4 +1,4 @@
-Assert output is `true` and reasoning is ≈ "3 iron for a bucket is no longer necessary since the blacksmith chest  at (243, 67, -71) already contains a water bucket" when "current task" = "1.2.1" and plan traversal ≈
+Assert `status` for 1.2.1 is "Dropped" and `retrospective` ≈ "3 iron for a bucket is no longer necessary since the blacksmith chest at (243, 67, -71) already contains a water bucket" when "current task" = "1.2.1" and plan traversal ≈
 ```json
 {
     "node": "1",
